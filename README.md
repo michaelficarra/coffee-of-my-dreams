@@ -1,4 +1,5 @@
 ## change
+* compile to strings as late as possible (still need to work out proper rules) (#908, #1011, #1072)
 * newer, awesome class syntax/semantics (#1207)
 * change/restrict comprehensions to python-style `[for ... in ...]`, implement syntax from #866
 * output indentation style == input indentation style
@@ -13,7 +14,6 @@
 - disallow `arguments`, `eval` in parameter lists (#1007)
 
 ## add
-+ compile to strings as late as possible (still need to work out proper rules) (#908, #1011, #1072)
 + Haskell'a function-infixing via backticks (kinda #915)
 + unnamed splats in array destructuring and function parameters (#870)
 + single-value-skipping `null` syntax (#870)
@@ -24,7 +24,7 @@
 + unary `::` operator (#1220)
 + call superclass's `extended` on extension (#710, gist:612786)
 + underscore in number literals (#632, others)
-+ quote-word (<[ word1 word2 ]>) (#582, ,#1211, others)
++ quote-word (<[ word1 word2 ]>) (#582, #1211, others)
 + yada-yada (#1142)
 + ES5 shims like Function::bind when they may not exist
 + (possibly) add Function::new (gist:612786)
