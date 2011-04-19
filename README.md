@@ -14,7 +14,7 @@
 - disallow `arguments`, `eval` in parameter lists (#1007)
 
 ## add
-+ Haskell'a function-infixing via backticks (kinda #915)
++ Haskell's function-infixing via backticks (kinda #915)
 + unnamed splats in array destructuring and function parameters (#870)
 + single-value-skipping `null` syntax (#870)
 + shorthand proposed by #1089
