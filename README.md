@@ -1,7 +1,7 @@
 ## change
 * compile to strings as late as possible (still need to work out proper rules) (#908, #1011, #1072)
 * newer, awesome class syntax/semantics (#1207)
-* change/restrict comprehensions to python-style `[for ... in ...]`
+* change/restrict comprehensions to python-style `[for ... in ...]` (kinda #1191)
 * output indentation style == input indentation style
 * fix parameter lists issue from #1007 (make temp vars)
 * disallow arguments with identical names (#1002)
