@@ -4,7 +4,6 @@
 * change/restrict comprehensions to python-style `[for ... in ...]` (kinda #1191)
 * output indentation style == input indentation style
 * fix parameter lists issue from #1007 (make temp vars)
-* disallow arguments with identical names (#1002)
 
 ## remove
 - block comments
@@ -12,6 +11,8 @@
 - YAML-style object literals (for now; these complicate the shit out of the language)
 - destructuring in list comprehensions (to allow for #866, mentioned below)
 - disallow `arguments`, `eval` in parameter lists (#1007)
+- disallow arguments with identical names (#1002)
+- disallow top-level literals and other obvious errors (#1066, #1069, #1240)
 
 ## add
 + Haskell's function-infixing via backticks (kinda #915)
