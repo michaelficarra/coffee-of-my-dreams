@@ -4,6 +4,7 @@
 * change/restrict comprehensions to python-style `[for ... in ...]` (kinda #1191)
 * output indentation style == input indentation style
 * fix parameter lists issue from #1007 (make temp vars)
+* only use semicolons before `[` and `(` on new lines; omit everywhere else
 
 ## remove
 - block comments
