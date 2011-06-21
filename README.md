@@ -37,7 +37,7 @@ compiler.
 + unnamed splats in array destructuring and function parameters ([#870](https://github.com/jashkenas/coffee-script/issues/870))
 + single-value-skipping `null` syntax ([#870](https://github.com/jashkenas/coffee-script/issues/870))
 + Haskell's function-infixing via backticks (kinda [#915](https://github.com/jashkenas/coffee-script/issues/915), <code>f0 a, b \`f1\` c</code> requires LL(2) parser)
-+ allow identifiers that are reserved words in JS through use of unicode escape sequences ([#1452](https://github.com/jashkenas/coffee-script/issues/1452))
++ allow identifiers that are reserved words in JS but not coffee through use of unicode escape sequences ([#1452](https://github.com/jashkenas/coffee-script/issues/1452))
 + shorthand proposed by [#1089](https://github.com/jashkenas/coffee-script/issues/1089)
 + implement syntax from [#866](https://github.com/jashkenas/coffee-script/issues/866)
 + require indents to match outdents ([#689](https://github.com/jashkenas/coffee-script/issues/689), [#1275](https://github.com/jashkenas/coffee-script/issues/1275), others)
