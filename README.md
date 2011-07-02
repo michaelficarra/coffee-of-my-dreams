@@ -43,6 +43,7 @@ compiler.
 + require indents to match outdents ([#689](https://github.com/jashkenas/coffee-script/issues/689), [#1275](https://github.com/jashkenas/coffee-script/issues/1275), others)
 + unary `::` operator ([#1220](https://github.com/jashkenas/coffee-script/issues/1220))
 + call superclass's `extended` method on extension ([#710](https://github.com/jashkenas/coffee-script/issues/710), [#841](https://github.com/jashkenas/coffee-script/issues/841#issuecomment-1300193), [gist:612786](https://gist.github.com/612786))
++ make `@constructor.name` portable ([#1272](https://github.com/jashkenas/coffee-script/pull/1272))
 + underscore in number literals ([#632](https://github.com/jashkenas/coffee-script/issues/632), [#857](https://github.com/jashkenas/coffee-script/issues/857), [#913](https://github.com/jashkenas/coffee-script/issues/913))
 + quote-word (`<[ word1 word2 ]>`) ([#582](https://github.com/jashkenas/coffee-script/issues/582), [#1211](https://github.com/jashkenas/coffee-script/issues/1211), others)
 + yada-yada ([#1142](https://github.com/jashkenas/coffee-script/issues/1142))
