@@ -1,4 +1,4 @@
-Once this alternatice coffeescript compiler is completed, it will hopefuly
+Once this alternative coffeescript compiler is completed, it will hopefuly
 become the next official compiler, though Jeremy may not agree with the entire
 list of changes below. Either way, I would like the language it compiles to
 remain as close to a superset of coffeescript as possible, unlike the
@@ -7,7 +7,7 @@ ever-diverging [Coco](https://github.com/satyr/coco).
 I will push my progress once I am finished with the design and architecture
 phases. At that point, I'll accept pull requests from anyone interested in
 helping to implement the AST classes. For those familiar with coffeescript
-internals: I am recycling {cake,coffee-scrip,command,optparse,repl}.coffee.
+internals: I am recycling {cake,coffee-script,command,optparse,repl}.coffee.
 This is only a rewrite of the lexing/parsing, not the interfaces to the
 compiler.
 
