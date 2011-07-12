@@ -33,7 +33,7 @@ compiler.
 
 ## add
 + allow `@0`, `@1`, etc. for `this[0]`, `this[1]`, etc.
-+ allow `a.0.1` for `a[0][1]` ([#918](https://github.com/jashkenas/coffee-script/issues/918))
++ allow `a.0.1` for `a[0][1]` ([#918](https://github.com/jashkenas/coffee-script/issues/918), [#1334](https://github.com/jashkenas/coffee-script/issues/1334))
 + unnamed splats in array destructuring and function parameters ([#870](https://github.com/jashkenas/coffee-script/issues/870))
 + single-value-skipping `null` syntax ([#870](https://github.com/jashkenas/coffee-script/issues/870))
 + Haskell's function-infixing via backticks (kinda [#915](https://github.com/jashkenas/coffee-script/issues/915), <code>f0 a, b \`f1\` c</code>, <code>f0 longArgumentName \`fn1\` b</code> requires arbitrary look-ahead...)
