@@ -36,6 +36,7 @@ compiler.
 + allow `a.0.1` for `a[0][1]` ([#918](https://github.com/jashkenas/coffee-script/issues/918), [#1334](https://github.com/jashkenas/coffee-script/issues/1334))
 + unnamed splats in array destructuring and function parameters ([#870](https://github.com/jashkenas/coffee-script/issues/870))
 + single-value-skipping `null` syntax ([#870](https://github.com/jashkenas/coffee-script/issues/870))
++ stepped ranges: `[0..8 by 2]` ([#835](https://github.com/jashkenas/coffee-script/issues/835))
 + Haskell's function-infixing via backticks (kinda [#915](https://github.com/jashkenas/coffee-script/issues/915), <code>f0 a, b \`f1\` c</code>, <code>f0 longArgumentName \`fn1\` b</code> requires arbitrary look-ahead...)
 + allow identifiers that are reserved words in JS but not coffee through use of unicode escape sequences ([#1452](https://github.com/jashkenas/coffee-script/issues/1452))
 + shorthand proposed by [#1089](https://github.com/jashkenas/coffee-script/issues/1089)
