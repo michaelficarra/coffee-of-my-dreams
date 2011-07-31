@@ -20,7 +20,7 @@ compiler.
 * output indentation style == input indentation style
 * fix parameter lists issue from [#1007](https://github.com/jashkenas/coffee-script/issues/1007) (make temp vars)
 * nice parameter lists compilation ([#1338](https://github.com/jashkenas/coffee-script/issues/1338))
-* only use semicolons before `[` and `(` on new lines; omit everywhere else
+* only use semicolons before `[`, `(`, `+`, `-`, and `/` that begin new lines; omit everywhere else
 
 ## remove
 - inline JS (really, it's completely unnecessary)
