@@ -32,8 +32,9 @@ compiler.
 - disallow top-level literals and other obvious errors ([#1066](https://github.com/jashkenas/coffee-script/issues/1066), [#1069](https://github.com/jashkenas/coffee-script/issues/1069), [#1240](https://github.com/jashkenas/coffee-script/issues/1240))
 
 ## add
-+ allow `@0`, `@1`, etc. for `this[0]`, `this[1]`, etc.
-+ allow `a.0.1` for `a[0][1]` ([#918](https://github.com/jashkenas/coffee-script/issues/918), [#1334](https://github.com/jashkenas/coffee-script/issues/1334))
++ `@0`, `@1`, etc. for `this[0]`, `this[1]`, etc.
++ `@@` as sugar for `@constructor`
++ `a.0.1` for `a[0][1]` ([#918](https://github.com/jashkenas/coffee-script/issues/918), [#1334](https://github.com/jashkenas/coffee-script/issues/1334))
 + unnamed splats in array destructuring and function parameters ([#870](https://github.com/jashkenas/coffee-script/issues/870))
 + single-value-skipping `null` syntax ([#870](https://github.com/jashkenas/coffee-script/issues/870))
 + stepped ranges: `[0..8 by 2]` ([#835](https://github.com/jashkenas/coffee-script/issues/835))
