@@ -2,10 +2,12 @@ Once this alternative coffeescript compiler is completed, it will hopefuly
 become the next official compiler, though Jeremy may not agree with the entire
 list of changes below. Either way, I would like the language it compiles to
 remain as close to a superset of coffeescript as possible, unlike the
-ever-diverging [Coco](https://github.com/satyr/coco). One major enhancement is
-that code generation will be kept entirely separate from the parse tree so
-that we can have separate targets (ES3, ES5, harmony, ...) and modules that
-implement user-defined targets.
+ever-diverging [Coco](https://github.com/satyr/coco). This means keeping the
+*change* and *remove* lists very small, which I believe I have done. I count
+only two major changes: classes (an overhaul) and list comprehension syntax.
+One noteworthy enhancement is that code generation will be kept entirely
+separate from the parse tree so that we can have separate targets (ES3, ES5,
+harmony, ...) and modules that implement user-defined targets.
 
 I will push my progress once I am finished with the design and architecture
 phases. At that point, I'll accept pull requests from anyone interested in
