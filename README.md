@@ -49,6 +49,7 @@ interfaces to the compiler.
 + implement syntax from [#866](https://github.com/jashkenas/coffee-script/issues/866)
 + require indents to match outdents ([#689](https://github.com/jashkenas/coffee-script/issues/689), [#1275](https://github.com/jashkenas/coffee-script/issues/1275), others)
 + unary `::` operator ([#1220](https://github.com/jashkenas/coffee-script/issues/1220))
++ Ruby's [`=~` regexp matching operator](http://ruby-doc.org/core/classes/String.html#M001135)
 + call superclass's `extended` method on extension ([#710](https://github.com/jashkenas/coffee-script/issues/710), [#841](https://github.com/jashkenas/coffee-script/issues/841#issuecomment-1300193), [gist:612786](https://gist.github.com/612786))
 + make `@constructor.name` portable ([#1272](https://github.com/jashkenas/coffee-script/pull/1272))
 + underscore in number literals ([#632](https://github.com/jashkenas/coffee-script/issues/632), [#857](https://github.com/jashkenas/coffee-script/issues/857), [#913](https://github.com/jashkenas/coffee-script/issues/913))
