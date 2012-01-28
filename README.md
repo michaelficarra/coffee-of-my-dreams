@@ -21,7 +21,7 @@ interfaces to the compiler.
 ## change
 * compile to strings as late as possible (still need to work out proper rules) ([#908](https://github.com/jashkenas/coffee-script/issues/908), [#1011](https://github.com/jashkenas/coffee-script/issues/1011), [#1072](https://github.com/jashkenas/coffee-script/issues/1072))
 * newer, awesome class syntax/semantics ([#1207](https://github.com/jashkenas/coffee-script/issues/1207), [#640](https://github.com/jashkenas/coffee-script/issues/640#issuecomment-376129), [harmony:classes](http://wiki.ecmascript.org/doku.php?id=harmony:classes))
-* change comprehension syntax to {python,harmony}-style `[... for ... in ...]` ([harmony:array_comprehensions](http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions), kinda [#1191](https://github.com/jashkenas/coffee-script/issues/1191))
+* change comprehension syntax to {python,harmony}-style `[... for ... in ...]` ([harmony:array_comprehensions](http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions), [#77](https://github.com/jashkenas/coffee-script/issues/77), [#2030](https://github.com/jashkenas/coffee-script/issues/2030), [#1191](https://github.com/jashkenas/coffee-script/issues/1191))
 * output indentation style == input indentation style
 * fix parameter lists issue from [#1007](https://github.com/jashkenas/coffee-script/issues/1007) (make temp vars)
 * nice parameter lists compilation ([#1338](https://github.com/jashkenas/coffee-script/issues/1338))
