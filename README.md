@@ -32,8 +32,6 @@ interfaces to the compiler.
 - block comments are *comments*, don't pass them through to the compilation target
 - YAML-style object literals (only during initial development phase; these complicate the shit out of the language)
 - destructuring in list comprehensions (to allow for [#866](https://github.com/jashkenas/coffee-script/issues/866), mentioned below)
-- disallow `arguments`, `eval` in parameter lists ([#1007](https://github.com/jashkenas/coffee-script/issues/1007))
-- disallow arguments with identical names ([#1002](https://github.com/jashkenas/coffee-script/issues/1002))
 - disallow top-level literals and other obvious errors ([#1066](https://github.com/jashkenas/coffee-script/issues/1066), [#1069](https://github.com/jashkenas/coffee-script/issues/1069), [#1240](https://github.com/jashkenas/coffee-script/issues/1240))
 
 ## add
@@ -43,7 +41,7 @@ interfaces to the compiler.
 + unnamed splats in array destructuring and function parameters ([#870](https://github.com/jashkenas/coffee-script/issues/870))
 + single-value-skipping `null` syntax ([#870](https://github.com/jashkenas/coffee-script/issues/870))
 + stepped ranges: `[0..8 by 2]` ([#835](https://github.com/jashkenas/coffee-script/issues/835))
-+ Haskell's function-infixing via backticks (kinda [#915](https://github.com/jashkenas/coffee-script/issues/915), [#1429](https://github.com/jashkenas/coffee-script/issues/1429), <code>f0 a, b \`f1\` c</code>, <code>f0 longArgumentName \`fn1\` b</code> requires arbitrary look-ahead...)
++ Haskell's function-infixing via backticks (kinda [#915](https://github.com/jashkenas/coffee-script/issues/915), [#1429](https://github.com/jashkenas/coffee-script/issues/1429), <code>f0 a, b \`f1\` c</code>)
 + allow identifiers that are reserved words in JS but not coffee through use of unicode escape sequences ([#1452](https://github.com/jashkenas/coffee-script/issues/1452))
 + shorthand proposed by [#1089](https://github.com/jashkenas/coffee-script/issues/1089)
 + implement syntax from [#866](https://github.com/jashkenas/coffee-script/issues/866)
