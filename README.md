@@ -1,3 +1,9 @@
+**UPDATE:** <em>I have started
+[a Kickstarter project](http://www.kickstarter.com/projects/1182995593/make-a-better-coffeescript-compiler)
+to fund this work. If this project is important to you, and you really care
+about the future of CoffeeScript, please make a donation. If I reach my goal,
+this project will become a reality much, much sooner.</em>
+
 Once this alternative coffeescript compiler is completed, it will hopefuly
 become the next official compiler, though Jeremy may not agree with the entire
 list of changes below. Either way, I would like the language it compiles to
