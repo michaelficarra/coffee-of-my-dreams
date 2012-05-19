@@ -27,7 +27,7 @@ interfaces to the compiler.
   * context of class body is the prototype (which maskes `@@` the constructor, see below)
   * regular assignments to @-vars for method definitions
 * change comprehension syntax to {python,harmony}-style `[... for ... in ...]` ([harmony:array_comprehensions](http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions), [#77](https://github.com/jashkenas/coffee-script/issues/77), [#2030](https://github.com/jashkenas/coffee-script/issues/2030), [#1191](https://github.com/jashkenas/coffee-script/issues/1191))
-* lower precedence of infix operators to allow for more paren-free invocations
+* lower precedence of infix operators to allow for more paren-free invocations ([unfinished discussion with Jeremy](http://irclogger.com/.coffeescript/2012-04-04#1333551786))
 * maybe: spaced (or newline-separated) member access to close implicit calls ([#1495](https://github.com/jashkenas/coffee-script/issues/1495))
 
 ## not really changes
