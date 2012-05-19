@@ -1,19 +1,16 @@
-**UPDATE:** <em>I have started
-[a Kickstarter project](http://www.kickstarter.com/projects/1182995593/make-a-better-coffeescript-compiler)
-to fund this work. If this project is important to you, and you really care
-about the future of CoffeeScript, please make a donation. If I reach my goal,
-this project will become a reality much, much sooner.</em>
+**NOTE:** <em>The changes listed here are not included in, but instead
+dependent upon [my Kickstarter project](http://www.kickstarter.com/projects/1182995593/make-a-better-coffeescript-compiler).
+The project has been funded and will allow me to make a fork that implements
+these changes once it is completed.</em>
 
-Once this alternative coffeescript compiler is completed, it will hopefuly
-become the next official compiler, though Jeremy may not agree with the entire
-list of changes below. Either way, I would like the language it compiles to
-remain as close to a superset of coffeescript as possible, unlike the
-ever-diverging [Coco](https://github.com/satyr/coco). This means keeping the
-*change* and *remove* lists very small, which I believe I have done. I count
-only two major changes: classes (an overhaul) and list comprehension syntax.
-One noteworthy enhancement is that code generation will be kept entirely
-separate from the parse tree so that we can have separate targets (ES3, ES5,
-harmony, ...) and modules that implement user-defined targets.
+I would like this language to remain as close to a superset of coffeescript as
+possible, unlike the ever-diverging [Coco](https://github.com/satyr/coco). This
+means keeping the *change* and *remove* lists very small, which I believe I
+have done. I count only two major changes: classes (an overhaul) and list
+comprehension syntax.  One noteworthy enhancement is that code generation will
+be kept entirely separate from the parse tree so that we can have separate
+targets (ES3, ES5, harmony, ...) and modules that implement user-defined
+targets.
 
 I will push my progress once I am finished with the design and architecture
 phases. At that point, I'll accept pull requests from anyone interested in
@@ -25,18 +22,25 @@ interfaces to the compiler.
 # Full Change List
 
 ## change
-* compile to strings as late as possible (still need to work out proper rules) ([#908](https://github.com/jashkenas/coffee-script/issues/908), [#1011](https://github.com/jashkenas/coffee-script/issues/1011), [#1072](https://github.com/jashkenas/coffee-script/issues/1072))
-* newer, awesome class syntax/semantics ([#1207](https://github.com/jashkenas/coffee-script/issues/1207), [#640](https://github.com/jashkenas/coffee-script/issues/640#issuecomment-376129), [harmony:classes](http://wiki.ecmascript.org/doku.php?id=harmony:classes))
+* newer, awesome class syntax/semantics ([#1207](https://github.com/jashkenas/coffee-script/issues/1207), [#640](https://github.com/jashkenas/coffee-script/issues/640#issuecomment-376129), [strawman:maximally_minimal_classes](http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes))
+  * constructor is the unique, unnamed top-level function
+  * context of class body is the prototype (which maskes `@@` the constructor, see below)
+  * regular assignments to @-vars for method definitions
 * change comprehension syntax to {python,harmony}-style `[... for ... in ...]` ([harmony:array_comprehensions](http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions), [#77](https://github.com/jashkenas/coffee-script/issues/77), [#2030](https://github.com/jashkenas/coffee-script/issues/2030), [#1191](https://github.com/jashkenas/coffee-script/issues/1191))
-* output indentation style == input indentation style
+* lower precedence of infix operators to allow for more paren-free invocations
+* maybe: spaced (or newline-separated) member access to close implicit calls ([#1495](https://github.com/jashkenas/coffee-script/issues/1495))
+
+## not really changes
+* default output indentation style == input indentation style
 * fix parameter lists issue from [#1007](https://github.com/jashkenas/coffee-script/issues/1007) (make temp vars)
 * nice parameter lists compilation ([#1338](https://github.com/jashkenas/coffee-script/issues/1338))
 * only use semicolons before `[`, `(`, `+`, `-`, and `/` that begin new lines; omit everywhere else
+* put utility functions at the bottom of the output ([#1638](https://github.com/jashkenas/coffee-script/issues/1638))
+* fix loops ([@int3's blog post](http://discontinuously.com/2012/05/iteration-in-coffeescript/), [#1952](https://github.com/jashkenas/coffee-script/issues/1952), [#1208](https://github.com/jashkenas/coffee-script/issues/1208))
 
 ## remove
 - inline JS (really, it's completely unnecessary)
 - block comments are *comments*, don't pass them through to the compilation target
-- YAML-style object literals (only during initial development phase; these complicate the shit out of the language)
 - destructuring in list comprehensions (to allow for [#866](https://github.com/jashkenas/coffee-script/issues/866), mentioned below)
 - disallow top-level literals and other obvious errors ([#1066](https://github.com/jashkenas/coffee-script/issues/1066), [#1069](https://github.com/jashkenas/coffee-script/issues/1069), [#1240](https://github.com/jashkenas/coffee-script/issues/1240))
 
@@ -54,7 +58,7 @@ interfaces to the compiler.
 + require indents to match outdents ([#689](https://github.com/jashkenas/coffee-script/issues/689), [#1275](https://github.com/jashkenas/coffee-script/issues/1275), others)
 + unary `::` operator ([#1220](https://github.com/jashkenas/coffee-script/issues/1220))
 + `**` exponentiation operator ([#2026](https://github.com/jashkenas/coffee-script/issues/2026), [#1990](https://github.com/jashkenas/coffee-script/issues/1990), [#79](https://github.com/jashkenas/coffee-script/issues/79))
-+ Ruby's [`=~` regexp matching operator](http://ruby-doc.org/core/classes/String.html#M001135) ([#1651](https://github.com/jashkenas/coffee-script/issues/1651), [#1653](https://github.com/jashkenas/coffee-script/issues/1653), [#115](https://github.com/jashkenas/coffee-script/issues/115))
++ Ruby's [`=~` regexp matching operator](http://ruby-doc.org/core/classes/String.html#M001135) for the convenience of Ruby-ers ([#1651](https://github.com/jashkenas/coffee-script/issues/1651), [#1653](https://github.com/jashkenas/coffee-script/issues/1653), [#115](https://github.com/jashkenas/coffee-script/issues/115))
 + call superclass's `extended` method on extension ([#710](https://github.com/jashkenas/coffee-script/issues/710), [#841](https://github.com/jashkenas/coffee-script/issues/841#issuecomment-1300193), [gist:612786](https://gist.github.com/612786))
 + make `@constructor.name` portable ([#1272](https://github.com/jashkenas/coffee-script/pull/1272))
 + underscore in number literals ([#632](https://github.com/jashkenas/coffee-script/issues/632), [#857](https://github.com/jashkenas/coffee-script/issues/857), [#913](https://github.com/jashkenas/coffee-script/issues/913))
