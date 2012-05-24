@@ -59,7 +59,7 @@ interfaces to the compiler.
 + require indents to match outdents ([#689](https://github.com/jashkenas/coffee-script/issues/689), [#1275](https://github.com/jashkenas/coffee-script/issues/1275), others)
 + unary `::` operator ([#1220](https://github.com/jashkenas/coffee-script/issues/1220))
 + `**` exponentiation operator ([#2026](https://github.com/jashkenas/coffee-script/issues/2026), [#1990](https://github.com/jashkenas/coffee-script/issues/1990), [#79](https://github.com/jashkenas/coffee-script/issues/79))
-+ Ruby's [`=~` regexp matching operator](http://ruby-doc.org/core/classes/String.html#M001135) for the convenience of Ruby-ers ([#1651](https://github.com/jashkenas/coffee-script/issues/1651), [#1653](https://github.com/jashkenas/coffee-script/issues/1653), [#115](https://github.com/jashkenas/coffee-script/issues/115))
++ Ruby's [`=~` regexp matching operator](http://ruby-doc.org/core/String.html#method-i-3D-7E) for the convenience of Ruby-ers ([#1651](https://github.com/jashkenas/coffee-script/issues/1651), [#1653](https://github.com/jashkenas/coffee-script/issues/1653), [#115](https://github.com/jashkenas/coffee-script/issues/115))
 + call superclass's `extended` method on extension ([#710](https://github.com/jashkenas/coffee-script/issues/710), [#841](https://github.com/jashkenas/coffee-script/issues/841#issuecomment-1300193), [gist:612786](https://gist.github.com/612786))
 + make `@constructor.name` portable ([#1272](https://github.com/jashkenas/coffee-script/pull/1272))
 + underscore in number literals ([#632](https://github.com/jashkenas/coffee-script/issues/632), [#857](https://github.com/jashkenas/coffee-script/issues/857), [#913](https://github.com/jashkenas/coffee-script/issues/913))
