@@ -32,7 +32,8 @@ interfaces to the compiler.
 * maybe: spaced (or newline-separated) member access to close implicit calls ([#1495](https://github.com/jashkenas/coffee-script/issues/1495))
 
 ## not really changes
-* default output indentation style == input indentation style
++ require indents to match outdents ([#689](https://github.com/jashkenas/coffee-script/issues/689), [#1275](https://github.com/jashkenas/coffee-script/issues/1275), others; this will be in CoffeeScript eventually)
+* default output indentation style determined by input indentation style
 * fix parameter lists issue from [#1007](https://github.com/jashkenas/coffee-script/issues/1007) (make temp vars)
 * nice parameter lists compilation ([#1338](https://github.com/jashkenas/coffee-script/issues/1338))
 * only use semicolons before `[`, `(`, `+`, `-`, and `/` that begin new lines; omit everywhere else
@@ -54,9 +55,8 @@ interfaces to the compiler.
 + stepped ranges: `[0..8 by 2]` ([#835](https://github.com/jashkenas/coffee-script/issues/835))
 + Haskell's function-infixing via backticks (kinda [#915](https://github.com/jashkenas/coffee-script/issues/915), [#1429](https://github.com/jashkenas/coffee-script/issues/1429), [gkz/LiveScript@fb548f23](https://github.com/gkz/LiveScript/commit/fb548f23df6273c4fc6ca4359cd8e1ee93ce42a1))
 + allow identifiers that are reserved words in JS but not coffee through use of unicode escape sequences ([#1452](https://github.com/jashkenas/coffee-script/issues/1452))
-+ shorthand proposed by [#1089](https://github.com/jashkenas/coffee-script/issues/1089)
-+ implement syntax from [#866](https://github.com/jashkenas/coffee-script/issues/866)
-+ require indents to match outdents ([#689](https://github.com/jashkenas/coffee-script/issues/689), [#1275](https://github.com/jashkenas/coffee-script/issues/1275), others)
++ `{foo.bar}` as shorthand for `{bar: foo.bar}` ([#1089](https://github.com/jashkenas/coffee-script/issues/1089))
++ quoted static member access (`a."b-c"` is `a["b-c"]`) to reserve postfix `[]` for indicating dynamic member access
 + unary `::` operator ([#1220](https://github.com/jashkenas/coffee-script/issues/1220))
 + `**` exponentiation operator ([#2026](https://github.com/jashkenas/coffee-script/issues/2026), [#1990](https://github.com/jashkenas/coffee-script/issues/1990), [#79](https://github.com/jashkenas/coffee-script/issues/79))
 + Ruby's [`=~` regexp matching operator](http://ruby-doc.org/core/String.html#method-i-3D-7E) for the convenience of Ruby-ers ([#1651](https://github.com/jashkenas/coffee-script/issues/1651), [#1653](https://github.com/jashkenas/coffee-script/issues/1653), [#115](https://github.com/jashkenas/coffee-script/issues/115))
