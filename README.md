@@ -29,7 +29,7 @@ code generation, not the interfaces to the compiler.
 * bare `super` should not imply a call; it should simply be a reference to `ClassName.__super__.constructor`
 * lower precedence of infix operators to allow for more paren-free invocations
   ([unfinished discussion with Jeremy](http://irclogger.com/.coffeescript/2012-04-04#1333551786))
-  * also add a super-low-precedence application operator: `$` in Haskell, `<|` in LiveScript (`@`?)
+  * also add a super-low-precedence application operator: `$` in Haskell, `<|` in LiveScript
 * maybe: spaced (or newline-separated) member access to close implicit calls
   ([#1495](https://github.com/jashkenas/coffee-script/issues/1495))
 * remove inline JS (really, it's completely unnecessary)
@@ -37,6 +37,7 @@ code generation, not the interfaces to the compiler.
 * disallow top-level literals and other obvious errors ([#1066](https://github.com/jashkenas/coffee-script/issues/1066),
   [#1069](https://github.com/jashkenas/coffee-script/issues/1069),
   [#1240](https://github.com/jashkenas/coffee-script/issues/1240))
+* disallow references to magic `arguments` variable (requires as-patterns, see below)
 
 ## compatible changes
 * require indents to match outdents ([#689](https://github.com/jashkenas/coffee-script/issues/689),
@@ -59,11 +60,12 @@ code generation, not the interfaces to the compiler.
   + `<- fn a; ...; b` to `fn(a, function(){ ...; return b; })`
   + `a <- fn b; ...; c` to `fn(b, function(a){ ...; return c; })`
   + `(a, b) <- fn c, <&>, d; ...; e` to `fn(c, function(a, b){ ...; return e; }, d)`
-  + preserve `this`, `arguments` by rewriting references
+  + preserve `this` by rewriting references as we do in bound functions
 + unnamed splats in array destructuring and function parameters
   ([#870](https://github.com/jashkenas/coffee-script/issues/870))
 + single-value-skipping `null` syntax ([#870](https://github.com/jashkenas/coffee-script/issues/870))
 + stepped ranges: `[0..8 by 2]` ([#835](https://github.com/jashkenas/coffee-script/issues/835))
++ Haskell's [as-patterns](http://www.haskell.org/tutorial/patterns.html): `o@{p0: a@[b, c]} = obj`, `fn = (args@[a, b, c]...) ->`
 + Haskell's function-infixing via backticks (kinda [#915](https://github.com/jashkenas/coffee-script/issues/915),
   [#1429](https://github.com/jashkenas/coffee-script/issues/1429),
   [gkz/LiveScript@fb548f23](https://github.com/gkz/LiveScript/commit/fb548f23df6273c4fc6ca4359cd8e1ee93ce42a1))
