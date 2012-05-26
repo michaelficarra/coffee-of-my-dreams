@@ -3,7 +3,7 @@
 The project has been funded and will allow me to make a fork that implements these changes once it is completed.</em>
 
 I would like this language to remain as close to a superset of coffeescript as possible, unlike the ever-diverging
-[Coco](https://github.com/satyr/coco). This means keeping the *change* and *remove* lists very small, which I believe I
+[Coco](https://github.com/satyr/coco). This means keeping the *incompatible change* list very small, which I believe I
 have done. One noteworthy enhancement is that code generation will be kept entirely separate from the parse tree so that
 we can have separate targets (ES3, ES5, harmony, ...) and modules that implement user-defined targets.
 
@@ -14,7 +14,7 @@ code generation, not the interfaces to the compiler.
 
 # Full Change List
 
-## change
+## incompatible changes
 * newer, awesome class syntax/semantics ([#1207](https://github.com/jashkenas/coffee-script/issues/1207),
   [#640](https://github.com/jashkenas/coffee-script/issues/640#issuecomment-376129),
   [strawman:maximally_minimal_classes](http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes))
@@ -32,8 +32,13 @@ code generation, not the interfaces to the compiler.
   * also add a super-low-precedence application operator: `$` in Haskell, `<|` in LiveScript (`@`?)
 * maybe: spaced (or newline-separated) member access to close implicit calls
   ([#1495](https://github.com/jashkenas/coffee-script/issues/1495))
+* remove inline JS (really, it's completely unnecessary)
+* block comments are *comments*, don't pass them through to the compilation target
+* disallow top-level literals and other obvious errors ([#1066](https://github.com/jashkenas/coffee-script/issues/1066),
+  [#1069](https://github.com/jashkenas/coffee-script/issues/1069),
+  [#1240](https://github.com/jashkenas/coffee-script/issues/1240))
 
-## not really changes
+## compatible changes
 * require indents to match outdents ([#689](https://github.com/jashkenas/coffee-script/issues/689),
   [#1275](https://github.com/jashkenas/coffee-script/issues/1275), others; this will be in CoffeeScript eventually)
 * default output indentation style determined by input indentation style
@@ -45,14 +50,7 @@ code generation, not the interfaces to the compiler.
   [#1952](https://github.com/jashkenas/coffee-script/issues/1952),
   [#1208](https://github.com/jashkenas/coffee-script/issues/1208))
 
-## remove
-- inline JS (really, it's completely unnecessary)
-- block comments are *comments*, don't pass them through to the compilation target
-- disallow top-level literals and other obvious errors ([#1066](https://github.com/jashkenas/coffee-script/issues/1066),
-  [#1069](https://github.com/jashkenas/coffee-script/issues/1069),
-  [#1240](https://github.com/jashkenas/coffee-script/issues/1240))
-
-## add
+## additions
 + `@0`, `@1`, etc. for `this[0]`, `this[1]`, etc.
 + `@@` as sugar for `@constructor`
 + `a.0.1` for `a[0][1]` ([#918](https://github.com/jashkenas/coffee-script/issues/918),
