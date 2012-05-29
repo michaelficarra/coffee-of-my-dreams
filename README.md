@@ -52,32 +52,40 @@ code generation, not the interfaces to the compiler.
   [#1208](https://github.com/jashkenas/coffee-script/issues/1208))
 
 ## additions
-+ `@0`, `@1`, etc. for `this[0]`, `this[1]`, etc.
 + `@@` as sugar for `@constructor`
++ `@0`, `@1`, etc. for `this[0]`, `this[1]`, etc.
 + `a.0.1` for `a[0][1]` ([#918](https://github.com/jashkenas/coffee-script/issues/918),
   [#1334](https://github.com/jashkenas/coffee-script/issues/1334))
++ partially-applied operators ([gkz/LiveScript@37ef73b7](https://github.com/gkz/LiveScript/commit/37ef73b702c32263aeba9bdd3ebadc3823fd5eda))
++ unary operators are functions ([gkz/LiveScript@c13b8a60](https://github.com/gkz/LiveScript/commit/c13b8a60564c16b78fd82548c01b092724f7e476))
 + backcalls, a flat call/cc via `<-`:
   + `<- fn a; ...; b` to `fn(a, function(){ ...; return b; })`
   + `a <- fn b; ...; c` to `fn(b, function(a){ ...; return c; })`
   + `(a, b) <- fn c, <&>, d; ...; e` to `fn(c, function(a, b){ ...; return e; }, d)`
   + preserve `this` by rewriting references as we do in bound functions
-+ unnamed splats in array destructuring and function parameters
-  ([#870](https://github.com/jashkenas/coffee-script/issues/870))
-+ single-value-skipping `null` syntax ([#870](https://github.com/jashkenas/coffee-script/issues/870))
 + stepped ranges: `[0..8 by 2]` ([#835](https://github.com/jashkenas/coffee-script/issues/835))
 + Haskell's [as-patterns](http://www.haskell.org/tutorial/patterns.html): `o@{p0: a@[b, c]} = obj`, `fn = (args@[a, b, c]...) ->`
 + Haskell's function-infixing via backticks (kinda [#915](https://github.com/jashkenas/coffee-script/issues/915),
   [#1429](https://github.com/jashkenas/coffee-script/issues/1429),
   [gkz/LiveScript@fb548f23](https://github.com/gkz/LiveScript/commit/fb548f23df6273c4fc6ca4359cd8e1ee93ce42a1))
-+ allow identifiers that are reserved words in JS but not coffee through use of unicode escape sequences
-  ([#1452](https://github.com/jashkenas/coffee-script/issues/1452))
-+ `{foo.bar}` as shorthand for `{bar: foo.bar}` ([#1089](https://github.com/jashkenas/coffee-script/issues/1089))
-+ quoted member access (`a."b-c"` is `a["b-c"]`) to reserve postfix `[]` for indicating nondeterministic member access
-+ unary `::` operator ([#1220](https://github.com/jashkenas/coffee-script/issues/1220))
 + `**` exponentiation operator ([#2026](https://github.com/jashkenas/coffee-script/issues/2026),
   [#1990](https://github.com/jashkenas/coffee-script/issues/1990),
   [#79](https://github.com/jashkenas/coffee-script/issues/79))
 + min/max operators (satyr/coco): `<?`, `>?`
++ underscore in number literals; postfix alphabetic comments: `15_550km`
+  ([#632](https://github.com/jashkenas/coffee-script/issues/632),
+  [#857](https://github.com/jashkenas/coffee-script/issues/857),
+  [#913](https://github.com/jashkenas/coffee-script/issues/913))
++ quote-word (`<[ word1 word2 ]>`) ([#582](https://github.com/jashkenas/coffee-script/issues/582),
+  [#1211](https://github.com/jashkenas/coffee-script/issues/1211), others)
++ unary `::` operator ([#1220](https://github.com/jashkenas/coffee-script/issues/1220))
++ allow identifiers that are reserved words in JS but not coffee through use of unicode escape sequences
+  ([#1452](https://github.com/jashkenas/coffee-script/issues/1452))
++ `{foo.bar}` as shorthand for `{bar: foo.bar}` ([#1089](https://github.com/jashkenas/coffee-script/issues/1089))
++ quoted member access (`a."b-c"` is `a["b-c"]`) to reserve postfix `[]` for indicating nondeterministic member access
++ unnamed splats in array destructuring and function parameters
+  ([#870](https://github.com/jashkenas/coffee-script/issues/870))
++ single-value-skipping `null` syntax ([#870](https://github.com/jashkenas/coffee-script/issues/870))
 + Ruby's [`=~` regexp matching operator](http://ruby-doc.org/core/String.html#method-i-3D-7E) for the convenience of
   Ruby-ers ([#1651](https://github.com/jashkenas/coffee-script/issues/1651),
   [#1653](https://github.com/jashkenas/coffee-script/issues/1653),
@@ -85,12 +93,6 @@ code generation, not the interfaces to the compiler.
 + call superclass's `extended` method on extension ([#710](https://github.com/jashkenas/coffee-script/issues/710),
   [#841](https://github.com/jashkenas/coffee-script/issues/841#issuecomment-1300193),
   [gist:612786](https://gist.github.com/612786))
-+ underscore in number literals; postfix alphabetic comments: `15_550km`
-  ([#632](https://github.com/jashkenas/coffee-script/issues/632),
-  [#857](https://github.com/jashkenas/coffee-script/issues/857),
-  [#913](https://github.com/jashkenas/coffee-script/issues/913))
-+ quote-word (`<[ word1 word2 ]>`) ([#582](https://github.com/jashkenas/coffee-script/issues/582),
-  [#1211](https://github.com/jashkenas/coffee-script/issues/1211), others)
 + yada-yada ([#1142](https://github.com/jashkenas/coffee-script/issues/1142), satyr/coco)
 + ES5 shims like Function::bind when they may not exist ([kriskowal/es5-shim](https://github.com/kriskowal/es5-shim))
 + `{+flag}`, `{-flag}` ([#885](https://github.com/jashkenas/coffee-script/issues/885))
