@@ -4,13 +4,7 @@ The project has been funded and will allow me to make a fork that implements the
 
 I would like this language to remain as close to a superset of coffeescript as possible, unlike the ever-diverging
 [Coco](https://github.com/satyr/coco). This means keeping the *incompatible change* list very small, which I believe I
-have done. One noteworthy enhancement is that code generation will be kept entirely separate from the parse tree so that
-we can have separate targets (ES3, ES5, harmony, ...) and modules that implement user-defined targets.
-
-I will push my progress once I am finished with the design and architecture phases. At that point, I'll accept pull
-requests from anyone interested in helping to implement the AST classes. For those familiar with coffeescript internals:
-I am recycling {cake,coffee-script,command,optparse,repl}.coffee.  This is only a rewrite of the lexing, parsing, and
-code generation, not the interfaces to the compiler.
+have done.
 
 # Full Change List
 
