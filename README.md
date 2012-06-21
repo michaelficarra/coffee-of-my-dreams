@@ -50,7 +50,7 @@ have done.
 + `@0`, `@1`, etc. for `this[0]`, `this[1]`, etc.
 + `a.0.1` for `a[0][1]` ([#918](https://github.com/jashkenas/coffee-script/issues/918),
   [#1334](https://github.com/jashkenas/coffee-script/issues/1334))
-+ partially-applied operators ([gkz/LiveScript@37ef73b7](https://github.com/gkz/LiveScript/commit/37ef73b702c32263aeba9bdd3ebadc3823fd5eda))
++ partially-applied operators and member accesses ([gkz/LiveScript@37ef73b7](https://github.com/gkz/LiveScript/commit/37ef73b702c32263aeba9bdd3ebadc3823fd5eda), [gkz/LiveScript#41](https://github.com/gkz/LiveScript/issues/41))
 + unary operators are functions ([gkz/LiveScript@c13b8a60](https://github.com/gkz/LiveScript/commit/c13b8a60564c16b78fd82548c01b092724f7e476))
 + backcalls, a flat call/cc via `<-`:
   + `<- fn a; ...; b` to `fn(a, function(){ ...; return b; })`
