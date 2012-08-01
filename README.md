@@ -31,6 +31,7 @@ have done.
 * disallow top-level literals and other obvious errors ([#1066](https://github.com/jashkenas/coffee-script/issues/1066),
   [#1069](https://github.com/jashkenas/coffee-script/issues/1069),
   [#1240](https://github.com/jashkenas/coffee-script/issues/1240))
+* `in` operator should perform an `egal` comparison, not strict equality comparison
 * disallow references to magic `arguments` variable (requires as-patterns, see below)
 
 ## compatible changes
