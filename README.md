@@ -24,13 +24,10 @@ have done.
 * lower precedence of infix operators to allow for more paren-free invocations
   ([unfinished discussion with Jeremy](http://irclogger.com/.coffeescript/2012-04-04#1333551786))
   * also add a super-low-precedence application operator: `$` in Haskell, `<|` in LiveScript
-* maybe: spaced (or newline-separated) member access to close implicit calls
+* spaced (or newline-separated) member access to close implicit calls
   ([#1495](https://github.com/jashkenas/coffee-script/issues/1495))
-* remove inline JS (really, it's completely unnecessary)
+* remove inline JS
 * block comments are *comments*, don't pass them through to the compilation target
-* disallow top-level literals and other obvious errors ([#1066](https://github.com/jashkenas/coffee-script/issues/1066),
-  [#1069](https://github.com/jashkenas/coffee-script/issues/1069),
-  [#1240](https://github.com/jashkenas/coffee-script/issues/1240))
 * `in` operator should perform an `egal` comparison, not strict equality comparison
 * disallow references to magic `arguments` variable (requires as-patterns, see below)
 
@@ -67,6 +64,7 @@ have done.
 + `**` exponentiation operator ([#2026](https://github.com/jashkenas/coffee-script/issues/2026),
   [#1990](https://github.com/jashkenas/coffee-script/issues/1990),
   [#79](https://github.com/jashkenas/coffee-script/issues/79))
++ `%%` (mod) and `//` (integer division) operators ([#1971](https://github.com/jashkenas/coffee-script/issues/1971))
 + min/max operators (satyr/coco): `<?`, `>?`
 + underscore in number literals; postfix alphabetic comments: `15_550km`
   ([#632](https://github.com/jashkenas/coffee-script/issues/632),
