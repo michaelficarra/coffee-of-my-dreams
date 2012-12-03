@@ -32,13 +32,7 @@ have done.
 * disallow references to magic `arguments` variable (requires as-patterns, see below)
 
 ## compatible changes
-* require indents to match outdents ([#689](https://github.com/jashkenas/coffee-script/issues/689),
-  [#1275](https://github.com/jashkenas/coffee-script/issues/1275), others; this will be in CoffeeScript eventually)
 * default output indentation style determined by input indentation style
-* fix parameter lists issue from [#1007](https://github.com/jashkenas/coffee-script/issues/1007) (make temp vars)
-* nice parameter lists compilation ([#1338](https://github.com/jashkenas/coffee-script/issues/1338))
-* only use semicolons before `[`, `(`, `+`, `-`, and `/` that begin new lines; omit everywhere else
-* put utility functions at the bottom of the output ([#1638](https://github.com/jashkenas/coffee-script/issues/1638))
 * fix loops ([@int3's blog post](http://discontinuously.com/2012/05/iteration-in-coffeescript/),
   [#1952](https://github.com/jashkenas/coffee-script/issues/1952),
   [#1208](https://github.com/jashkenas/coffee-script/issues/1208))
@@ -61,9 +55,6 @@ have done.
 + Haskell's function-infixing via backticks (kinda [#915](https://github.com/jashkenas/coffee-script/issues/915),
   [#1429](https://github.com/jashkenas/coffee-script/issues/1429),
   [gkz/LiveScript@fb548f23](https://github.com/gkz/LiveScript/commit/fb548f23df6273c4fc6ca4359cd8e1ee93ce42a1))
-+ `**` exponentiation operator ([#2026](https://github.com/jashkenas/coffee-script/issues/2026),
-  [#1990](https://github.com/jashkenas/coffee-script/issues/1990),
-  [#79](https://github.com/jashkenas/coffee-script/issues/79))
 + `%%` (mod) and `//` (integer division) operators ([#1971](https://github.com/jashkenas/coffee-script/issues/1971))
 + min/max operators (satyr/coco): `<?`, `>?`
 + underscore in number literals; postfix alphabetic comments: `15_550km`
@@ -88,8 +79,6 @@ have done.
   [#841](https://github.com/jashkenas/coffee-script/issues/841#issuecomment-1300193),
   [gist:612786](https://gist.github.com/612786))
 + yada-yada ([#1142](https://github.com/jashkenas/coffee-script/issues/1142), satyr/coco)
-+ ES5 shims like Function::bind when they may not exist ([kriskowal/es5-shim](https://github.com/kriskowal/es5-shim))
 + `{+flag}`, `{-flag}` ([#885](https://github.com/jashkenas/coffee-script/issues/885))
-+ (possibly) add Function::new ([gist:612786](https://gist.github.com/612786))
 + (possibly) scheme-style argument accessor (if I can resolve ambiguity with `a <b> c` somehow)
   ([#739](https://github.com/jashkenas/coffee-script/issues/739))
