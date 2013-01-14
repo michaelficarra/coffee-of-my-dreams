@@ -65,6 +65,7 @@ have done.
 + quote-word (`<[ word1 word2 ]>`) ([#582](https://github.com/jashkenas/coffee-script/issues/582),
   [#1211](https://github.com/jashkenas/coffee-script/issues/1211), others)
 + unary `::` operator ([#1220](https://github.com/jashkenas/coffee-script/issues/1220))
++ unicode alternatives for keywords/symbols ([#2](https://github.com/michaelficarra/coffee-of-my-dreams/issues/2), [#1679](https://github.com/jashkenas/coffee-script/issues/1679))
 + allow identifiers that are reserved words in JS but not coffee through use of unicode escape sequences
   ([#1452](https://github.com/jashkenas/coffee-script/issues/1452))
 + `{foo.bar}` as shorthand for `{bar: foo.bar}` ([#1089](https://github.com/jashkenas/coffee-script/issues/1089))
