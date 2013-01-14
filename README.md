@@ -53,7 +53,7 @@ have done.
   [gkz/LiveScript@fb548f23](https://github.com/gkz/LiveScript/commit/fb548f23df6273c4fc6ca4359cd8e1ee93ce42a1))
 + `%%` (mod) and `//` (integer division) operators ([#1971](https://github.com/jashkenas/coffee-script/issues/1971))
 + min/max operators (satyr/coco): `<?`, `>?`
-+ sugar for accessing the last element of an array-like, syntax TBD (https://github.com/jashkenas/coffee-script/issues/156)
++ sugar for accessing the last element of an array-like, syntax TBD ([#156](https://github.com/jashkenas/coffee-script/issues/156))
 + `@@` as sugar for `@constructor`
 + `@0`, `@1`, etc. for `this[0]`, `this[1]`, etc.
 + `a.0.1` for `a[0][1]` ([#918](https://github.com/jashkenas/coffee-script/issues/918),
