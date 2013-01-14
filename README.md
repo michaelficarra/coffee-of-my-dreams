@@ -38,10 +38,6 @@ have done.
   [#1208](https://github.com/jashkenas/coffee-script/issues/1208))
 
 ## additions
-+ `@@` as sugar for `@constructor`
-+ `@0`, `@1`, etc. for `this[0]`, `this[1]`, etc.
-+ `a.0.1` for `a[0][1]` ([#918](https://github.com/jashkenas/coffee-script/issues/918),
-  [#1334](https://github.com/jashkenas/coffee-script/issues/1334))
 + partially-applied operators and member accesses ([gkz/LiveScript@37ef73b7](https://github.com/gkz/LiveScript/commit/37ef73b702c32263aeba9bdd3ebadc3823fd5eda), [gkz/LiveScript#41](https://github.com/gkz/LiveScript/issues/41))
 + unary operators are functions ([gkz/LiveScript@c13b8a60](https://github.com/gkz/LiveScript/commit/c13b8a60564c16b78fd82548c01b092724f7e476))
 + backcalls, a flat call/cc via `<-`:
@@ -57,6 +53,11 @@ have done.
   [gkz/LiveScript@fb548f23](https://github.com/gkz/LiveScript/commit/fb548f23df6273c4fc6ca4359cd8e1ee93ce42a1))
 + `%%` (mod) and `//` (integer division) operators ([#1971](https://github.com/jashkenas/coffee-script/issues/1971))
 + min/max operators (satyr/coco): `<?`, `>?`
++ sugar for accessing the last element of an array-like, syntax TBD (https://github.com/jashkenas/coffee-script/issues/156)
++ `@@` as sugar for `@constructor`
++ `@0`, `@1`, etc. for `this[0]`, `this[1]`, etc.
++ `a.0.1` for `a[0][1]` ([#918](https://github.com/jashkenas/coffee-script/issues/918),
+  [#1334](https://github.com/jashkenas/coffee-script/issues/1334))
 + underscore in number literals; postfix alphabetic comments: `15_550km`
   ([#632](https://github.com/jashkenas/coffee-script/issues/632),
   [#857](https://github.com/jashkenas/coffee-script/issues/857),
