@@ -45,7 +45,7 @@ have done.
   + `a <- fn b; ...; c` to `fn(b, function(a){ ...; return c; })`
   + `(a, b) <- fn c, <&>, d; ...; e` to `fn(c, function(a, b){ ...; return e; }, d)`
   + preserve `this` by rewriting references as we do in bound functions
-+ explicit tail calls via `recur`, [as in clojure](http://clojure.org/special_forms#Special%20Forms--\(recur%20exprs*\))
++ explicit tail calls via `recur`, [as in clojure](http://clojure.org/special_forms#Special%20Forms--\(recur%20exprs*\)) ([#2665](https://github.com/jashkenas/coffee-script/issues/2665))
 + stepped ranges: `[0..8 by 2]` ([#835](https://github.com/jashkenas/coffee-script/issues/835))
 + Haskell's [as-patterns](http://www.haskell.org/tutorial/patterns.html): `o@{p0: a@[b, c]} = obj`, `fn = (args@[a, b, c]...) ->`
 + Haskell's function-infixing via backticks (kinda [#915](https://github.com/jashkenas/coffee-script/issues/915),
